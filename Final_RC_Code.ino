@@ -30,17 +30,18 @@ void loop() {
  dfw.update();
  leftmotor.write(dfw.joysticklv());
  rightmotor.write(180 - dfw.joystickrv());
- if (dfw.l2() == 0) {
+ if (dfw.l2() == 0) { //if pressed
  intakeMotor.write(180); //need to determine direction of motor
  }
- if (dfw.l1() == 0) {
+ if (dfw.l1() == 0) { // if pressed 
   intakeMotor.write(0);
+  dfw.update();
  }
- if (dfw.one() == 0) {
+ if (dfw.one() == 0) { // if pressed
   liftMotor.write(0);
     dfw.update();
  }
-  if (dfw.three() == 0) {
+  if (dfw.three() == 0) { // if pressed 
   liftMotor.write(180);
     dfw.update();
  }
