@@ -47,7 +47,7 @@ void DoDriving() {
      if((analogRead(A3)>t) && (analogRead(A4)>t))
        leftMotor.write()
        rightMotor.write() //go straight
-      
+      // raise lift and drive at same time
       
 }
 
