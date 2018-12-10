@@ -5,7 +5,7 @@
 LiquidCrystal lcd(40, 41, 42, 43, 44, 45);
 
 static enum stateChoices {
-  DRIVING_FORWARD, TURNING,DRIVING_FORWARD_TO_DORM, LIFT, STOPPED
+  DRIVING_FORWARD_TO_TURN, TURNING,DRIVING_FORWARD_TO_DORM, LIFT, STOPPED
 } state;
 
 const int limitSwitchPort =  ;
@@ -59,8 +59,7 @@ void DoDriving() {
     case TURNING:
       lcd.setCursor(0,0);
       lcd.clear();
-      lcd.print("TURNING");
-      delay(
+      lcd.print("TURNING")
       leftMotor.write()
       rightMotor.write()
       delay()
